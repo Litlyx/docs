@@ -1,0 +1,78 @@
+---
+title: Serverless
+description: 'Learn how to track your first visit & event using Cloud Functions, Lamba Fucntions or Edge Fucntions.'
+---
+
+
+## Pre-Requisites
+
+Before proceeding, ensure you:
+<Steps>
+  <Step title="Knows the basics for Typescript.">
+    Get started [here](https://www.typescriptlang.org/)
+  </Step>
+  <Step title="have a project on Supabase, Firebase ecc...">
+    That can trigger your functions.
+  </Step>
+</Steps>
+
+## 1. Install
+
+Choose your package manager & install the library.
+
+<CodeGroup>
+```bash npm
+npm install litlyx-js
+```
+```bash yarn
+yarn add litlyx-js
+```
+```bash pnpm
+pnpm add litlyx-js
+```
+```bash bun
+bun install litlyx-js
+```
+</CodeGroup>
+
+
+## 2. Import
+Now import litlyx in your `entry-point` file. Normally in Nuxt, it is called `main.vue`.
+
+```javascript javascript
+import {Lit} from litlyx.js
+```
+
+## 3. Initialize
+
+Next, connect the Litlyx library with your project in your entry-point file, `main.vue`, as follows:
+
+```javascript javascript
+Lit.init("your_project_id");
+```
+
+This line will already collect more than 10 KPIs for you such as `Page Visits`, `Referrers`, `Countries`, `Unique Sessions` and many more.
+
+
+## 4. Collect Custom Events
+To customize your experience, add the following line in each function you desire. There is no limit to the number of events.
+
+```javascript javascript
+Lit.event("your_event_name");
+```
+If you want to exercise more control over your events, you can use the `metadata` field. In your dashboard, you can group them in the `Events` tab with the `Event Metadata Analyzer`.
+
+```javascript javascript
+Lit.event("your_event_name", metadata: { 
+  'type': 'MAIN_CTA', 
+  'priority': 0.9
+});
+```
+
+## 5. Your turn now!
+
+Use our minimal setup to learn how Litlyx works!
+
+<Card title="Start from Template" icon="code" href="/techs/nuxt">
+  Minimal setup to start using Litlyx in seconds with Nuxt.
+</Card>

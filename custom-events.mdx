@@ -1,0 +1,56 @@
+---
+title: Custom Events
+description: 'Tracks Customized Analytics with minimal setup.'
+---
+
+<img
+  className="block dark:hidden"
+  src="/images/hero-light.svg"
+  alt="Hero Light"
+/>
+<img
+  className="hidden dark:block"
+  src="/images/hero-dark.svg"
+  alt="Hero Dark"
+/>
+
+## Minimal Setup for Tailor-made Analytics
+
+Add the following line of code, in each key `function` you would like to track.
+
+
+```javascript 
+Lit.event("click-on-buy");
+```
+
+To get your `project_id`, [Create your project on Litlyx Cloud.](https://dashboard.litlyx.com)
+
+## More control
+
+Sometimes just an `event name` isn't enough. If yo uwant to add more control to your data, you can use the `metadata` field. Like this:
+
+```javascript 
+Lit.event("click-on-buy", metadata: {
+    "product_id": "1",
+    "customer_id": "customer_id_1",
+    "price": 1999.99,
+    "product_name": "Design Chair with a cute cat!"
+});
+```
+
+
+## Ready to go!
+
+Analyze all yours `custom events` in the `Events` tab, with semplicity interacting with the charts or using our `Events Metadata Analyzer`.
+
+<img
+  className="block dark:hidden"
+  src="/images/hero-light.svg"
+  alt="Hero Light"
+/>
+<img
+  className="hidden dark:block"
+  src="/images/hero-dark.svg"
+  alt="Hero Dark"
+/>
+

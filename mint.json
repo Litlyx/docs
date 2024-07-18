@@ -1,0 +1,100 @@
+{
+  "name": "Litlyx Docs",
+  "logo": {
+    "dark": "/logo/dark.svg",
+    "light": "/logo/light.svg"
+  },
+  "favicon": "/favicon.svg",
+  "colors": {
+    "primary": "#222A42",
+    "light": "#5680F8",
+    "dark": "#222A42",
+    "anchors": {
+      "from": "#222A42",
+      "to": "#5680F8"
+    }
+  },
+  "topbarLinks": [
+    {
+      "name": "Support",
+      "url": "mailto:help@litlyx.com"
+    }
+  ],
+  "topbarCtaButton": {
+    "name": "Get Started",
+    "url": "https://dashboard.litlyx.com"
+  },
+  "tabs": [
+    {
+      "name": "Self Hosting",
+      "url": "self-hosting"
+    }
+  ],
+  "anchors": [
+    {
+      "name": "Documentation",
+      "icon": "book-open-cover",
+      "url": "https://docs.litlyx.com"
+    },
+    {
+      "name": "Discord",
+      "icon": "discord",
+      "url": "https://discord.gg/Uq378Zvem3"
+    },
+    {
+      "name": "Github",
+      "icon": "github",
+      "url": "https://github.com/Litlyx/litlyx"
+    }
+  ],
+  "navigation": [
+    {
+      "group": "Get Started",
+      "pages": [
+        "introduction",
+        "universal",
+        "custom-events",
+        "quickstart"
+      ]
+    },
+    {
+      "group": "Quickstarts",
+      "pages": [
+        "techs/js",
+        "techs/serverless",
+        "techs/nuxt",
+        "techs/next",
+        "techs/react",
+        "techs/vue",
+        "techs/angular",
+        "techs/php"
+      ]
+    },
+    {
+      "group": "Data Collection",
+      "pages": [
+        "data/introduction"
+      ]
+    },
+    {
+      "group": "Use Cases",
+      "pages": [
+        "use/introduction"
+      ]
+    },
+    {
+      "group": "Self Hosting",
+      "pages": [
+        "self-hosting/introduction",
+        "self-hosting/docker",
+        "self-hosting/yml"
+      ]
+    }
+  ],
+  "footerSocials": {
+    "x": "https://x.com/litlyx",
+    "github": "https://github.com/Litlyx/litlyx",
+    "linkedin": "https://www.linkedin.com/company/litlyx",
+    "website": "https://litlyx.com"
+  }
+}
