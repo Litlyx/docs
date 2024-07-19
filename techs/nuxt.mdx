@@ -39,12 +39,12 @@ bun install litlyx-js
 Now import litlyx in your `entry-point` file. Normally in Nuxt, it is called `main.vue`.
 
 ```javascript javascript
-import {Lit} from litlyx.js
+import { Lit } from "litlyx-js"
 ```
 
 ## 3. Initialize
 
-Next, connect the Litlyx library with your project in your entry-point file, `main.vue`, as follows:
+Next, initialize Litlyx library with your project in your entry-point file as follow:
 
 ```javascript javascript
 Lit.init("your_project_id");
@@ -59,7 +59,8 @@ To customize your experience, add the following line in each function you desire
 ```javascript javascript
 Lit.event("your_event_name");
 ```
-If you want to exercise more control over your events, you can use the `metadata` field. In your dashboard, you can group them in the `Events` tab with the `Event Metadata Analyzer`.
+
+If you want to exercise more control over your events, you can use the `metadata` field.
 
 ```javascript javascript
 Lit.event("your_event_name", metadata: { 
@@ -68,10 +69,12 @@ Lit.event("your_event_name", metadata: {
 });
 ```
 
+In your dashboard, you can group them in the `Events` tab with the `Event Metadata Analyzer`.
+
 ## 5. Your turn now!
 
 Use our minimal setup to learn how Litlyx works!
 
-<Card title="Start from Template" icon="code" href="/techs/nuxt">
+<Card title="Start from Template" icon="code" href="https://github.com/Litlyx/litlyx-nuxt-example">
   Minimal setup to start using Litlyx in seconds with Nuxt.
 </Card>
