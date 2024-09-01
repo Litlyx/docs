@@ -28,8 +28,13 @@
     {
       "name": "Self Hosting",
       "url": "self-hosting"
+    },
+    {
+      "name": "API (coming soon)",
+      "url": "api-reference"
     }
   ],
+
   "anchors": [
     {
       "name": "Documentation",
@@ -88,6 +93,20 @@
         "self-hosting/introduction",
         "self-hosting/docker",
         "self-hosting/yml"
+      ]
+    },
+    {
+      "group": "API Documentation",
+      "pages": [
+        "api-reference/introduction"
+      ]
+    },
+    {
+      "group": "Endpoint Examples",
+      "pages": [
+        "api-reference/endpoint/get",
+        "api-reference/endpoint/create",
+        "api-reference/endpoint/delete"
       ]
     }
   ],

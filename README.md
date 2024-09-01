@@ -1,25 +1,16 @@
 # Litlyx Documentation
 
-This repository contain the litlyx documentation, if you woul
+This repository contain the litlyx documentation. Made with mintlify
 
-<!-- <h4 align="center"> -->
 🌐 <a href="https://litlyx.com">Website</a> 🌟 <a href="https://github.com/litlyx/litlyx">Litlyx Repository</a> 🔥 <a href="https://dashboard.litlyx.com">Start for Free!</a>
-<!-- </h4> -->
 
 ![GitHub Repo stars](https://img.shields.io/github/stars/Litlyx/litlyx)
 ![NPM Version](https://img.shields.io/npm/v/litlyx?logo=npm&color=orange)
 ![npm bundle size](https://img.shields.io/bundlephobia/min/litlyx)
 
 <br />
-
-#
-
-<p align="center">
-  The easiest developers centric analytics tool.<br>Litlyx is an open-source analytics solution for any JavaScript framework. Setup takes less then 30 seconds and just one line of code!
-</p>
-
+ The easiest developers centric analytics tool.<br>Litlyx is an open-source analytics solution for any JavaScript framework. Setup takes less then 30 seconds and just one line of code!
 <br />
-
 
 # Join Discord
 
