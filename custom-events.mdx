@@ -5,12 +5,12 @@ description: 'Tracks Customized Analytics with minimal setup.'
 
 <img
   className="block dark:hidden"
-  src="/images/hero-light.svg"
+  src="/images/dash-events.svg"
   alt="Hero Light"
 />
 <img
   className="hidden dark:block"
-  src="/images/hero-dark.svg"
+  src="/images/dash-events.svg"
   alt="Hero Dark"
 />
 
@@ -27,7 +27,8 @@ curl -X POST "https://broker.litlyx.com/event" \
     "name": "testEvent1",
     "metadata": "{\"test\": \"something\"}",
     "website": "something",
-    "user
+    "userAgent": "something"
+  }'
 ```
 
 To get your `project_id`, [Create your project on Litlyx Cloud.](https://dashboard.litlyx.com)
