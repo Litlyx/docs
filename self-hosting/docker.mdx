@@ -3,8 +3,6 @@ title: Self-host with Docker
 description: 'Discover how to self-host Litlyx with Docker in seconds.'
 ---
 
-
-
 ## 1. Fork the project
 
 From github fork the project on your local machine.
@@ -26,21 +24,41 @@ Run the following command in the `terminal`.
 docker-compose up
 ```
 
-## 4. Forward data to your local instance
+## 4.a Forward data to your local instance with script tag
 
-coming soon.
+Add `data-host`, add `data-port`, add `data-secure` and set up at true if is https, false if is http,
 
+```javascript
+<script defer data-project="project_id_here" data-host="your-host-name" data-port="your-port" data-secure="true/false"
+src="https://cdn.jsdelivr.net/gh/litlyx/litlyx-js/browser/litlyx.js">
+</script>
+```
+
+
+## 4.b Forward data to your local instance using npm
+
+Add `data-host`, add `data-port`, add `data-secure` and set up at true if is https, false if is http,
+
+```javascript
+Lit.init('proect_id', {
+  server: {
+    host: "your-host-name",
+    port: 123,
+    secure: true
+  }
+})
+```
 ## 5. Now is your turn.
 
 Now you are up to go. You can use your own instance of Litlyx. Track analytics, easy way.
 
 <img
   className="block dark:hidden"
-  src="/images/hero-light.svg"
+  src="/images/easy-dashboard.svg"
   alt="Hero Light"
 />
 <img
   className="hidden dark:block"
-  src="/images/hero-dark.svg"
+  src="/images/easy-dashboard.svg"
   alt="Hero Dark"
 />
