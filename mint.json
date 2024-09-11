@@ -5,6 +5,11 @@
     "light": "/logo/light.svg"
   },
   "favicon": "/favicon.svg",
+  "api": {
+    "playground": {
+      "mode": "hide"
+    }
+  },
   "colors": {
     "primary": "#222A42",
     "light": "#5680F8",
@@ -30,7 +35,7 @@
       "url": "self-hosting"
     },
     {
-      "name": "API (coming soon)",
+      "name": "API",
       "url": "api-reference"
     }
   ],
@@ -102,11 +107,10 @@
       ]
     },
     {
-      "group": "Endpoint Examples",
+      "group": "Endpoints",
       "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/delete"
+        "api-reference/endpoint/visits-post",
+        "api-reference/endpoint/events-post"
       ]
     }
   ],

@@ -1,32 +1,53 @@
 ---
 title: 'Introduction'
-description: 'API to take data collected with Litlyx on your own apps is in the making.'
+description: 'Understand general concepts, response codes, and authentication methods for working with the Litlyx API.'
 ---
 
 <Note>
-  Coming soon!
+We welcome all types of contributions for building SDKs in various tech stacks or developing use cases with the Litlyx API. For requests, join our Discord and talk with the team, or send an email to: help@litlyx.com.  
 </Note>
 
-## Welcome
+## Base URL
+The Litlyx API is built on REST principles. We recommend using HTTPS for every request to enhance data security and privacy. The API does not support HTTP.
 
-There are two ways to build API documentation: [OpenAPI](https://mintlify.com/docs/api-playground/openapi/setup) and [MDX components](https://mintlify.com/docs/api-playground/mdx/configuration). For the starter kit, we are using the following OpenAPI specification.
+The base URL is:
 
-<Card
-  title="Plant Store Endpoints"
-  icon="leaf"
-  href="https://github.com/mintlify/starter/blob/main/api-reference/openapi.json"
->
-  View the OpenAPI specification file
-</Card>
+```
+https://api.litlyx.com/api/v1
+```
+
 
 ## Authentication
 
-All API endpoints are authenticated using Bearer tokens and picked up from the specification file.
+All API endpoints are authenticated using Bearer tokens, which are picked up from the specification file.
 
 ```json
-"security": [
-  {
-    "bearerAuth": []
-  }
-]
+Authorization: Bearer lit_123456789
 ```
+
+To get your `Api Key`, open the project's settings tab [on Litlyx Cloud.](https://dashboard.litlyx.com)
+
+
+## Response Codes
+
+Litlyx uses standard HTTP codes to indicate the success or failure of your requests.
+
+| Code     | Description                           |
+| -------- | ------------------------------------- |
+| `200`      | Successful request.                    |
+| `400`      | Check that the parameters were correct.|
+| `401`      |The API key used was missing. |
+| `403`      |The API key used was invalid. |
+| `404`      |The resource was not found. |
+| `429`      |The rate limit was exceeded. |
+| `500`      |Indicates an error with Litlyx servers. |
+
+## Concepts
+
+To optimize API performance, our return value is dynamic. You need to specify `rows` with specific names, and the API will return only the values you request. Here is the list of `row names` to include in the body of your requests:
+
+| Name     | Description                           |
+| -------- | ------------------------------------- |
+| `user-agent`  | Return the raw user agent string.          |
+
+Start integrating your data collected with Litlyx into your proprietary apps today!

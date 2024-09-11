@@ -1,8 +1,8 @@
 {
   "openapi": "3.0.1",
   "info": {
-    "title": "OpenAPI Plant Store",
-    "description": "A sample API that uses a plant store as an example to demonstrate features in the OpenAPI specification",
+    "title": "API - Litlyx",
+    "description": "Api specs to get started with Litlyx analytics API.",
     "license": {
       "name": "MIT"
     },
@@ -10,7 +10,7 @@
   },
   "servers": [
     {
-      "url": "http://sandbox.mintlify.com"
+      "url": "https://api.litlyx.com/api/v1"
     }
   ],
   "security": [
@@ -19,54 +19,15 @@
     }
   ],
   "paths": {
-    "/plants": {
-      "get": {
-        "description": "Returns all plants from the system that the user has access to",
-        "parameters": [
-          {
-            "name": "limit",
-            "in": "query",
-            "description": "The maximum number of results to return",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Plant response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Plant"
-                  }
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        }
-      },
+    "/visits": {
       "post": {
-        "description": "Creates a new plant in the store",
+        "description": "Retrieve raw data for visits collected with Litlyx.",
         "requestBody": {
-          "description": "Plant to add to the store",
+          "description": "",
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewPlant"
+                "$ref": "#/components/schemas/Visits"
               }
             }
           },
@@ -74,17 +35,17 @@
         },
         "responses": {
           "200": {
-            "description": "plant response",
+            "description": "Success",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Plant"
+                  "$ref": "#/components/schemas/Visits_Success"
                 }
               }
             }
           },
           "400": {
-            "description": "unexpected error",
+            "description": "Error",
             "content": {
               "application/json": {
                 "schema": {
@@ -96,25 +57,30 @@
         }
       }
     },
-    "/plants/{id}": {
-      "delete": {
-        "description": "Deletes a single plant based on the ID supplied",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "ID of plant to delete",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
+    "/events": {
+      "post": {
+        "description": "Retrieve raw data for events collected with Litlyx.",
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Events"
+              }
             }
-          }
-        ],
+          },
+          "required": true
+        },
         "responses": {
-          "204": {
-            "description": "Plant deleted",
-            "content": {}
+          "200": {
+            "description": "API response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Events_Success"
+                }
+              }
+            }
           },
           "400": {
             "description": "unexpected error",
@@ -132,47 +98,85 @@
   },
   "components": {
     "schemas": {
-      "Plant": {
+      "Visits": {
         "required": [
-          "name"
+          "rows"
         ],
         "type": "object",
         "properties": {
-          "name": {
-            "description": "The name of the plant",
+          "rows": {
+            "description": "Array of strings selecting the rows you want the API to return. Possible values: `user-agent`",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "limit": {
+            "description": "How many element the API should return. Default value `100`",
+            "type": "number"
+          },
+          "from": {
+            "description": "From what day the API will return the data. Format: ISO.  Default value `all-times`",
             "type": "string"
           },
-          "tag": {
-            "description": "Tag to specify the type",
+          "to": {
+            "description": "To what day the API will return the data. Format: ISO.  Default value `date-now`",
             "type": "string"
           }
         }
       },
-      "NewPlant": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Plant"
-          },
-          {
-            "required": [
-              "id"
-            ],
-            "type": "object",
-            "properties": {
-              "id": {
-                "description": "Identification number of the plant",
-                "type": "integer",
-                "format": "int64"
-              }
+      "Visits_Success": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "description": "The value depends on rows you will specify in the body. It will return a object with the specified rows.",
+            "type": "array",
+            "items": {
+              "type": "object"
             }
           }
-        ]
+        }
+      },
+      "Events": {
+        "required": [
+          "rows"
+        ],
+        "type": "object",
+        "properties": {
+          "rows": {
+            "description": "Array of strings selecting the rows you want the API to return. Possible values: `user-agent`",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "limit": {
+            "description": "How many element the API should return. Default value `100`",
+            "type": "number"
+          },
+          "from": {
+            "description": "From what day the API will return the data. Format: ISO.  Default value `all-times`",
+            "type": "string"
+          },
+          "to": {
+            "description": "To what day the API will return the data. Format: ISO.  Default value `date-now`",
+            "type": "string"
+          }
+        }
+      },
+      "Events_Success": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "description": "The value depends on rows you will specify in the body. It will return a object with the specified rows.",
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          }
+        }
       },
       "Error": {
-        "required": [
-          "error",
-          "message"
-        ],
         "type": "object",
         "properties": {
           "error": {
