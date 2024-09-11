@@ -105,37 +105,35 @@
         "type": "object",
         "properties": {
           "rows": {
-            "description": "Array of strings selecting the rows you want the API to return. Possible values: `user-agent`",
+            "description": "Array of strings selecting the rows you want the API to return. Possible values: `website`,`page`,`referrer`,`browser`,`country`,`continent`,`os`,`device`,`created_at`,`session`,`flowHash`.",
             "type": "array",
             "items": {
               "type": "string"
             }
           },
           "limit": {
-            "description": "How many element the API should return. Default value `100`",
-            "type": "number"
+            "description": "How many element the API should return.",
+            "type": "number",
+            "default": 100
           },
           "from": {
-            "description": "From what day the API will return the data. Format: ISO.  Default value `all-times`",
-            "type": "string"
+            "description": "From what day the API will return the data. Format: ISO. ",
+            "type": "string",
+            "default": "`2024-01-01T00:00:00+0000`"
           },
           "to": {
-            "description": "To what day the API will return the data. Format: ISO.  Default value `date-now`",
-            "type": "string"
+            "description": "To what day the API will return the data. Format: ISO.",
+            "type": "string",
+            "default": "`current date as ISO`"
           }
         }
       },
       "Visits_Success": {
-        "type": "object",
-        "properties": {
-          "value": {
-            "description": "The value depends on rows you will specify in the body. It will return a object with the specified rows.",
-            "type": "array",
-            "items": {
-              "type": "object"
-            }
-          }
-        }
+        "type": "array",
+        "items": {
+          "type": "object"
+        },
+        "description": "The response is of type `object[]`. The value depends on rows you will specify in the body. It will return an object with the specified rows."
       },
       "Events": {
         "required": [
@@ -144,37 +142,35 @@
         "type": "object",
         "properties": {
           "rows": {
-            "description": "Array of strings selecting the rows you want the API to return. Possible values: `user-agent`",
+            "description": "Array of strings selecting the rows you want the API to return. Possible values: `name`,`metadata`,`created_at`,`session`.",
             "type": "array",
             "items": {
               "type": "string"
             }
           },
           "limit": {
-            "description": "How many element the API should return. Default value `100`",
-            "type": "number"
+            "description": "How many element the API should return.",
+            "type": "number",
+            "default": 100
           },
           "from": {
-            "description": "From what day the API will return the data. Format: ISO.  Default value `all-times`",
-            "type": "string"
+            "description": "From what day the API will return the data. Format: ISO. ",
+            "type": "string",
+            "default": "`2024-01-01T00:00:00+0000`"
           },
           "to": {
-            "description": "To what day the API will return the data. Format: ISO.  Default value `date-now`",
-            "type": "string"
+            "description": "To what day the API will return the data. Format: ISO.",
+            "type": "string",
+            "default": "`current date as ISO`"
           }
         }
       },
       "Events_Success": {
-        "type": "object",
-        "properties": {
-          "value": {
-            "description": "The value depends on rows you will specify in the body. It will return a object with the specified rows.",
-            "type": "array",
-            "items": {
-              "type": "object"
-            }
-          }
-        }
+        "type": "array",
+        "items": {
+          "type": "object"
+        },
+        "description": "The response is of type `object[]`. The value depends on rows you will specify in the body. It will return an object with the specified rows."
       },
       "Error": {
         "type": "object",

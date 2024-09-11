@@ -46,8 +46,36 @@ Litlyx uses standard HTTP codes to indicate the success or failure of your reque
 
 To optimize API performance, our return value is dynamic. You need to specify `rows` with specific names, and the API will return only the values you request. Here is the list of `row names` to include in the body of your requests:
 
+#### Row names for Visits
+
 | Name     | Description                           |
 | -------- | ------------------------------------- |
-| `user-agent`  | Return the raw user agent string.          |
+| `website`  | Website domain.|
+| `page`  | Page path (url)|
+| `referrer`  | External source from where the visit originates.|
+| `browser`  | Browser used by your visitor.|
+| `country`  | Visitor country.|
+| `continent`  | Visitor continent.|
+| `os`  | Visitor operative system.|
+| `device`  | Visitor device.|
+| `created_at`  | When the visit was made. |
+| `session`  | Session formula: hash(daily_salt + strip(website_domain) + strip(ip_address) + user_agent)|
+| `flowHash`  | *Internal use.|
+
+
+#### Row names for Events
+
+| Name     | Description                           |
+| -------- | ------------------------------------- |
+| `name`  | Event name.|
+| `metadata`  | Event metadata.|
+| `created_at`  | When the event was made. |
+| `session`  | Session formula: hash(daily_salt + strip(website_domain) + strip(ip_address) + user_agent)|
+
+##### How to extract metadata fields?
+
+`metadata`: Get all the event's metadata. 
+
+`metadata.custom_field`: Get only the metadata `custom_field` field.
 
 Start integrating your data collected with Litlyx into your proprietary apps today!
