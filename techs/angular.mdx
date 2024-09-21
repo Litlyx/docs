@@ -36,7 +36,8 @@ bun install litlyx-js
 
 
 ## 2. Import
-Now import litlyx in your `entry-point` file. The easiest way in Angular is in the file `app.component.ts`.
+
+Now import Litlyx in your `entry-point` file. The easiest way in Angular is in the file `app.component.ts`.
 
 ```javascript javascript
 import { Lit } from "litlyx-js"
@@ -59,6 +60,7 @@ This line will already collect more than 10 KPIs for you such as `Page Visits`, 
 <Note>If you have an advanced Angular project or you are a senior developer, remember not to show hardcoded IDs. Use a more secure pattern, for example, using an .env file and reading from it "your_project_id".</Note>
 
 ## 4. Collect Custom Events
+
 To customize your experience, add the following line in each function you desire. There is no limit to the number of events.
 
 If you want to test if it works and everything is well configured, import the OnInit method in the entry-point file (always `app.component.ts` in this example):
@@ -71,7 +73,7 @@ and implement the imported function as follows:
 
 ```javascript javascript
   ngOnInit(): void {
-    Lit.event('your_event_name');
+    Lit.event("your_event_name");
   }
 ```
 
