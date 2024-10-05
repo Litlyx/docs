@@ -4,7 +4,6 @@ description: 'Learn how to track your first visit & event using React.'
 ---
 
 
-
 ## Pre-Requisites
 
 Before proceeding, ensure you:
@@ -16,6 +15,16 @@ Before proceeding, ensure you:
     Sign up on [Litlyx Dashboard](https://dashboard.litlyx.com/) and create a new project.
   </Step>
 </Steps>
+
+## 0. Create Project
+
+In this example, we used [Vite](https://vitejs.dev) as a local development server.
+
+```bash npm
+npm create vite@latest my-app --template react-ts
+```
+
+<Note>Feel free to use your favorite development server tool, but to reproduce this example, you should use Vite to have the same structure.</Note>
 
 ## 1. Install
 
@@ -38,55 +47,56 @@ bun install litlyx-js
 
 
 ## 2. Import
-Now import litlyx in your `entry-point` file. Normally in React, you can add this in `layout.tsx`.
+
+Now import Litlyx in your `entry-point` file. The easiest way in React is in the file `App.tsx`.
 
 ```javascript javascript
 import { Lit } from "litlyx-js"
 ```
 
-<Note>Don't forget to add `use client` over the imports</Note>
-
+<Note>If you have an advanced React project or you are a senior developer, import it in the chosen path where you configure the entire application.</Note>
 
 ## 3. Initialize
 
-Next, initialize Litlyx library with your project in your entry-point file as follow:
+Next, initialize the Litlyx library with your project in your entry-point file (always `App.tsx` in this example) as follow:
 
 ```javascript javascript
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  Lit.init("your_project_id");
-  return (
-    <html lang="en" className="dark">
-      <body
-        className="antialiased overflow-x-hidden"
-      >
-        {children}
-      </body>
-    </html>
-  );
+function App() {
+    Lit.init("your_project_id");
+    /* previously existing code */
 }
 ```
 
 This line will already collect more than 10 KPIs for you such as `Page Visits`, `Referrers`, `Countries`, `Unique Sessions` and many more.
 
+<Note>If you have an advanced React project or you are a senior developer, remember not to show hardcoded IDs. Use a more secure pattern, for example, using an .env file and reading from it "your_project_id".</Note>
 
 ## 4. Collect Custom Events
+
 To customize your experience, add the following line in each function you desire. There is no limit to the number of events.
 
+If you want to test if it works and everything is well configured, import the useEffect hook in the entry-point file (always `App.tsx` in this example):
+
 ```javascript javascript
-Lit.event("your_event_name");
+useEffect(() => {
+    Lit.event("your_event_name");
+}, [count])
 ```
 
 If you want to exercise more control over your events, you can use the `metadata` field.
 
 ```javascript javascript
-Lit.event("your_event_name", metadata: { 
-  'type': 'MAIN_CTA', 
-  'priority': 0.9
-});
+useEffect(() => {
+    Lit.event(
+        "your_event_name", {
+        metadata: {
+            "functional-component": "App",
+            value: count
+        }
+    });
+}, [count])
 ```
 
 In your dashboard, you can group them in the `Events` tab with the `Event Metadata Analyzer`.
+
+<Note>Remember that `count` is a variable declared in `App.tsx` in the default structure if you used Vite. Otherwise, create your custom variable to listen to the click event.</Note>
