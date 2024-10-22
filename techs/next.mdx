@@ -87,4 +87,12 @@ Lit.event("your_event_name", metadata: {
 });
 ```
 
+In practice, let's try to trigger an event:
+
+```javascript javascript
+<div onClick={() => Lit.event("click-button")}>
+  button name
+</div>
+```
+
 In your dashboard, you can group them in the `Events` tab with the `Event Metadata Analyzer`.

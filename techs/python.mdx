@@ -3,4 +3,64 @@ title: Python
 description: 'Learn how to track yours events using Python.'
 ---
 
-coming soon.
+## Pre-Requisites
+Before proceeding, ensure you:
+<Steps>
+  <Step title="Get your project ID">
+    Sign up on [Litlyx Dashboard](https://dashboard.litlyx.com/) and create a new project.
+  </Step>
+  <Step title="Check our Litlyx Sender">
+    Get started [here](https://github.com/vchaindz/litlyx-sender)
+  </Step>
+</Steps>
+
+
+## 1. Install
+
+You can install LitLyx Sender using pip:
+
+<CodeGroup>
+```pip pip
+pip install litlyx-sender
+```
+</CodeGroup>
+
+
+## 2. Usage
+
+Here's a basic example of how to use LitLyx Sender:
+
+```Python
+from litlyx_sender import LitLyxSender
+
+# Create a sender instance
+sender = LitLyxSender()
+
+# Send a simple event
+sender.send_event(name="test_event", metadata={"test": "value"})
+
+# Use the decorator
+@sender.event_decorator(name="decorated_event", metadata={"decorated": True})
+def example_function():
+    print("This is an example function.")
+
+example_function()
+```
+
+## 3. Configuration
+
+
+```Python
+sender = LitLyxSender(
+    url="https://custom.litlyx.com/event",
+    default_pid="custom_pid",
+    default_name="custom_event",
+    default_metadata={"custom": "metadata"},
+    default_website="custom.website.com",
+    default_user_agent="CustomApp/1.0"
+)
+```
+
+## 4. Your turn now!
+
+Try it yourself! Thanks to our beloved user and supporter Dennis.

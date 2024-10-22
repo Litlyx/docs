@@ -77,19 +77,8 @@
         "techs/react",
         "techs/vue",
         "techs/angular",
+        "techs/python",
         "techs/php"
-      ]
-    },
-    {
-      "group": "Data Collection",
-      "pages": [
-        "data/introduction"
-      ]
-    },
-    {
-      "group": "Use Cases",
-      "pages": [
-        "use/introduction"
       ]
     },
     {
