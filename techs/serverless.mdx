@@ -1,6 +1,30 @@
 ---
 title: Serverless
-description: 'Learn how to track your first visit & event using Cloud Functions, Lamba Fucntions or Edge Fucntions.'
+description: 'Learn how to track your first visit and event using Cloud Functions, Lambda Functions, or Edge Functions.'
 ---
 
-coming soon.
+## Pre-Requisites
+Choose your preferred method to serve serverless functions.
+
+## Firebase
+
+Before proceeding, make sure you've installed `litlyx-js` using your favorite package manager in your Firebase environment.
+
+```javascript javascript
+const { onCall } = require("firebase-functions/v2/https");
+
+const { Lit } = require('litlyx-js');
+
+exports.logEvent = onCall((request) => {
+
+  Lit.init('PID')
+
+  const { eventName } = request.data;
+
+  Lit.event(eventName);
+});
+```
+
+## Coming soon
+
+In the near future, we will be adding support for more serverless environments such as Deno, Vercel Functions, Supabase Edge Functions.

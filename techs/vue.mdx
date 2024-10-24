@@ -3,4 +3,74 @@ title: Vue
 description: 'Learn how to track your first visit & event using Vue.'
 ---
 
-coming soon.
+## Pre-Requisites
+
+Before proceeding, ensure you:
+<Steps>
+  <Step title="Have installed Vue">
+    Get started [here](https://vuejs.org/)
+  </Step>
+  <Step title="Get your project ID">
+    Sign up on [Litlyx Dashboard](https://dashboard.litlyx.com/) and create a new project.
+  </Step>
+</Steps>
+
+## 1. Install
+
+Choose your package manager & install the library.
+
+<CodeGroup>
+```bash npm
+npm install litlyx-js
+```
+```bash yarn
+yarn add litlyx-js
+```
+```bash pnpm
+pnpm add litlyx-js
+```
+```bash bun
+bun install litlyx-js
+```
+</CodeGroup>
+
+
+## 2. Import
+Now import litlyx in your `entry-point` file. Normally in Vue 2, it is called `main.vue` or if you use Vue 3 `app.vue`.
+
+```javascript javascript
+import { Lit } from "litlyx-js"
+```
+
+## 3. Initialize
+
+Next, initialize Litlyx library with your project in your entry-point file as follow:
+
+```javascript javascript
+Lit.init("your_project_id");
+```
+
+This line of code will immediately start collecting web analytics such as: `Page Visits`, `Real-Time Users`, `Referrers`, `Bounce Rate`, `Countries`, `Unique Visitor Sessions`, `OS` & `Devices`.
+
+
+## 4. Collect Custom Events
+To customize your experience, add the following line in each function you desire. There is no limit to the number of events.
+
+```javascript javascript
+Lit.event("your_event_name");
+```
+
+If you want to exercise more control over your events, you can use the `metadata` field.
+
+```javascript javascript
+Lit.event("your_event_name", metadata: { 
+  'type': 'MAIN_CTA', 
+  'priority': 0.9
+});
+```
+
+In your dashboard, you can group them in the `Events` tab with the `Event Metadata Analyzer`.
+
+## 5. Your turn now!
+
+Use litlyx in your Vue 2 or Vue 3 app at ease.

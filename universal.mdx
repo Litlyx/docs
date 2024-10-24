@@ -1,6 +1,6 @@
 ---
 title: Easy Setup
-description: 'Tracks Analytics everywhere Javascript is supported. In seconds.'
+description: 'Track web analytics and custom events anywhere JavaScript is supported, all within seconds.'
 ---
 
 <img
@@ -14,9 +14,18 @@ description: 'Tracks Analytics everywhere Javascript is supported. In seconds.'
   alt="Hero Dark"
 />
 
-## Universal Setup \< 30 seconds!
+## Pre-Requisites
 
-With the following line of code in your `index.html`, under the `body` tag, you can already record analytics such as `Page Visits`, `Referrers`, `Countries`, `Unique Sessions` and many more.
+Before proceeding, ensure you:
+<Steps>
+  <Step title="Get your project ID">
+    Sign up on [Litlyx](https://dashboard.litlyx.com/) and create a new project.
+  </Step>
+</Steps>
+
+## 1.a - Universal Setup (in just 30 seconds)
+
+With a simple line of code in your **index.html**, under the **body** tag, you can start tracking analytics such as `Page Visits`, `Real-Time Users`, `Referrers`, `Bounce Rate`, `Countries`, `Unique Visitor Sessions`, `OS` & `Devices`.
 
 
 ```html 
@@ -25,18 +34,24 @@ src="https://cdn.jsdelivr.net/gh/litlyx/litlyx-js/browser/litlyx.js">
 </script>
 ```
 
-Get your `project_id`, by visiting [Litlyx Cloud](https://dashboard.litlyx.com).
-
-
-## Using any package manager like npm
-
-Firstly, get your `project_id`, by visiting [Litlyx Cloud](https://dashboard.litlyx.com).
+## 1.b - Using any package manager
 
 Install Litlyx library from your favourite package manager.
 
+<CodeGroup>
 ```bash npm
 npm install litlyx-js
 ```
+```bash yarn
+yarn add litlyx-js
+```
+```bash pnpm
+pnpm add litlyx-js
+```
+```bash bun
+bun install litlyx-js
+```
+</CodeGroup>
 
 Now import litlyx in your `entry-point` file.
 
@@ -51,8 +66,6 @@ Next, initialize Litlyx library with your project in your entry-point file as fo
 Lit.init("your_project_id");
 ```
 
-This line will already collect more than 10 KPIs for you such as `Page Visits`, `Referrers`, `Countries`, `Unique Sessions` and many more.
-
 ## Ready to go!
 
-Explore Litlyx's Dashboard with your analytics collected in `real-time`.
+Explore [Litlyx's Dashboard](https://dashboard.litlyx.com/) with your web analytics collected in real-time.

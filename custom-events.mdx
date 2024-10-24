@@ -1,6 +1,6 @@
 ---
 title: Custom Events
-description: 'Tracks Customized Analytics with minimal setup.'
+description: 'Litlyx is a powerful tool that allows you to track custom events with minimal setup.'
 ---
 
 <img
@@ -15,9 +15,19 @@ description: 'Tracks Customized Analytics with minimal setup.'
 />
 
 
+## Pre-Requisites
+
+Before proceeding, ensure you:
+<Steps>
+  <Step title="Get your project ID">
+    Sign up on [Litlyx](https://dashboard.litlyx.com/) and create a new project.
+  </Step>
+</Steps>
+
+
 ## Fire Your First Event with cURL
 
-Want to quickly see how Litlyx works with events? Use the cURL command below to send a test event. Just replace the `project_id` with your actual project ID in your terminal.
+Curious to see how Litlyx works with events? Simply use the cURL command below to send a test event. Just replace `project_id` with your actual project ID in your terminal.
 
 ```bash
 curl -X POST "https://broker.litlyx.com/event" \
@@ -31,23 +41,23 @@ curl -X POST "https://broker.litlyx.com/event" \
   }'
 ```
 
-To get your `project_id`, [Create your project on Litlyx Cloud.](https://dashboard.litlyx.com)
-
 
 ## Minimal Setup
 
-Ensure you alreaady initialized the library in your entry point.
 
-Next, add the following line of code, in each key `function` you would like to track.
+<Note>
+Ensure you already initialized the library in your entry point.
+</Note>
+
+
+Add the following line of code, in each key `function` you would like to track.
 
 
 ```javascript 
 Lit.event("click-on-buy");
 ```
 
-To get your `project_id`, [Create your project on Litlyx Cloud.](https://dashboard.litlyx.com)
-
-## Metadata
+## Handle Metadata
 
 Sometimes just an `event name` isn't enough. If you want to add more control to your data, you can use the `metadata` field. Like this:
 
@@ -60,7 +70,27 @@ Lit.event("click-on-buy", metadata: {
 });
 ```
 
+## HTML example code
+
+```html 
+<button onclick="Lit.event('click-on-buy')">Buy</button>
+```
+
+
+## Function example code
+
+```javascript 
+myFunction () {
+  // your existing code...
+  Lit.event('my-function-name');
+}
+```
+
 
 ## Ready to go!
 
-Analyze all yours `custom events` in the `Events` tab on the cloud dashboard. Interact with the charts or analyze your metadata with our `Events Metadata Analyzer`.
+Analyze all yours `custom events` on the cloud dashboard. 
+
+- Understand how users interact with your custom events by creating `Custom Funnels`. 
+- Analyze where your users come from and trigger an event with the `User Flow`.
+- Interact with events metadata with our `Events Metadata Analyzer`.
