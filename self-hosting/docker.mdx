@@ -26,31 +26,34 @@ docker-compose up
 
 ## 4.a Forward data to your local instance with script tag
 
-Add `data-host`, add `data-port`, add `data-secure` and set up at true if is https, false if is http,
+Add `data-host`, add `data-port`, add `data-secure` and set up at true if is https, false if is http.
 
 ```javascript
 <script defer data-project="project_id_here" 
               data-host="your-host-name" 
-              data-port="your-port" 
-              data-secure="true/false"
+              data-port="your-producer-port" 
+              data-secure="false"
         src="https://cdn.jsdelivr.net/gh/litlyx/litlyx-js/browser/litlyx.js">
 </script>
 ```
-
+<Note>The Producer service collects data and adds it to a queue for storage. By default, it uses port 3099, but you can choose a different port if needed.</Note>
 
 ## 4.b Forward data to your local instance using npm
 
-Add `data-host`, add `data-port`, add `data-secure` and set up at true if is https, false if is http,
+Add `data-host`, add `data-port`, add `data-secure` and set up at true if is https, false if is http.
 
 ```javascript
 Lit.init('project_id', {
   server: {
     host: "your-host-name",
-    port: 123,
+    port: 3099,
     secure: true
   }
 })
 ```
+
+<Note>The Producer service collects data and adds it to a queue for storage. By default, it uses port 3099, but you can choose a different port if needed.</Note>
+
 ## 5. Now is your turn.
 
 Now you are up to go. You can use your own instance of Litlyx. Track analytics, easy way.
