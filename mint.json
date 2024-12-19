@@ -61,10 +61,10 @@
     {
       "group": "Get Started",
       "pages": [
-        "get-started/introduction",
-        "get-started/universal",
-        "get-started/custom-events",
-        "get-started/quickstart"
+        "introduction",
+        "universal",
+        "custom-events",
+        "quickstart"
       ]
     },
     {
