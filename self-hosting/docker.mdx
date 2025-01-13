@@ -8,23 +8,17 @@ description: 'Discover how to self-host Litlyx with Docker in seconds.'
 From github fork the project on your local machine.
 
 
-## 2. Build A Docker Image
-
-Open the project in your favorite IDE. Run the following command in the `terminal`.
-
-```bash docker
-docker-compose build
-```
-
-## 3. Run A Docker Container
+## 2. Run A Docker Container
 
 Run the following command in the `terminal`.
+
+This command automatically pulls all the necessary images for Litlyx.
 
 ```bash docker
 docker-compose up
 ```
 
-## 4.a Forward data to your local instance with script tag
+## 3.a Forward data to your local instance with script tag
 
 Add `data-host`, add `data-port`, add `data-secure` and set up at true if is https, false if is http.
 
@@ -38,7 +32,7 @@ Add `data-host`, add `data-port`, add `data-secure` and set up at true if is htt
 ```
 <Note>The Producer service collects data and adds it to a queue for storage. By default, it uses port 3099, but you can choose a different port if needed.</Note>
 
-## 4.b Forward data to your local instance using npm
+## 3.b Forward data to your local instance using npm
 
 Add `data-host`, add `data-port`, add `data-secure` and set up at true if is https, false if is http.
 
@@ -54,7 +48,7 @@ Lit.init('project_id', {
 
 <Note>The Producer service collects data and adds it to a queue for storage. By default, it uses port 3099, but you can choose a different port if needed.</Note>
 
-## 5. Now is your turn.
+## 4. Now is your turn.
 
 Now you are up to go. You can use your own instance of Litlyx. Track analytics, easy way.
 
