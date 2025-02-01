@@ -29,7 +29,7 @@ services:
     command: redis-server --save 20 1 --loglevel warning --requirepass litlyx
 
   producer:
-    image: litlyx-producer
+    image: litlyx/litlyx-producer
     restart: always
     ports:
       - "3099:3099"
@@ -44,9 +44,12 @@ services:
       dockerfile: ./producer/Dockerfile
 
   consumer:
-    image: litlyx-consumer
+    image: litlyx/litlyx-consumer
     restart: always
+    ports:
+      - "3011:3031"
     environment:
+      PORT: "3031"
       # Optional - Used to send welcome and quota emails
       # EMAIL_SERVICE: "Brevo"      
       # BREVO_API_KEY: ""
@@ -62,7 +65,7 @@ services:
       dockerfile: ./consumer/Dockerfile 
 
   dashboard:
-    image: litlyx-dashboard
+    image: litlyx/litlyx-dashboard
     restart: always
     ports:
       - "3000:3000"
@@ -97,6 +100,9 @@ services:
       # Default user created in NO_AUTH mode
       NUXT_NOAUTH_USER_EMAIL: 'default@user.com'
       NUXT_NOAUTH_USER_NAME: "defaultuser"
+
+      NUXT_SELFHOSTED: 'true'
+      NUXT_PUBLIC_SELFHOSTED: 'true'
 
       # Optional - Used for tests
       # NUXT_STRIPE_SECRET_TEST: ""
