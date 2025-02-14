@@ -3,12 +3,21 @@ title: Self-host with Docker
 description: 'Discover how to self-host Litlyx with Docker in seconds.'
 ---
 
-## 1. Fork the project
+## 1. Clone the project
 
-From github fork the project on your local machine.
+From github clone or fork the project on your local machine.
 
+## 2. Change user Credentials
 
-## 2. Run A Docker Container
+Go to `docker-compose.yaml` file and change this two fields to create your admin user
+
+```yaml
+  # Credentials to login in NO_AUTH mode
+  NUXT_NOAUTH_USER_EMAIL: 'default@user.com'
+  NUXT_NOAUTH_USER_PASS: "litlyx123"
+```
+
+## 3. Run A Docker Container
 
 Run the following command in the `terminal`.
 
@@ -18,7 +27,7 @@ This command automatically pulls all the necessary images for Litlyx.
 docker-compose up
 ```
 
-## 3.a Forward data to your local instance with script tag
+## 4.a Forward data to your local instance with script tag
 
 Add `data-host`, add `data-port`, add `data-secure` and set up at true if is https, false if is http.
 
@@ -32,7 +41,7 @@ Add `data-host`, add `data-port`, add `data-secure` and set up at true if is htt
 ```
 <Note>The Producer service collects data and adds it to a queue for storage. By default, it uses port 3099, but you can choose a different port if needed.</Note>
 
-## 3.b Forward data to your local instance using npm
+## 4.b Forward data to your local instance using npm
 
 Add `data-host`, add `data-port`, add `data-secure` and set up at true if is https, false if is http.
 
@@ -48,7 +57,7 @@ Lit.init('project_id', {
 
 <Note>The Producer service collects data and adds it to a queue for storage. By default, it uses port 3099, but you can choose a different port if needed.</Note>
 
-## 4. Now is your turn.
+## 5. Now is your turn.
 
 Now you are up to go. You can use your own instance of Litlyx. Track analytics, easy way.
 
