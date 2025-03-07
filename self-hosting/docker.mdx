@@ -30,6 +30,7 @@ docker-compose up
 ## 4.a Forward data to your local instance with script tag
 
 Add `data-host`, add `data-port`, add `data-secure` and set up at true if is https, false if is http.
+On the server, you need to open port `3000` for the dashboard instance and port `3099` (default) for forwarding visits and events.
 
 ```javascript
 <script defer data-project="project_id_here" 
@@ -44,6 +45,7 @@ Add `data-host`, add `data-port`, add `data-secure` and set up at true if is htt
 ## 4.b Forward data to your local instance using npm
 
 Add `data-host`, add `data-port`, add `data-secure` and set up at true if is https, false if is http.
+On the server, you need to open port `3000` for the dashboard instance and port `3099` (default) for forwarding visits and events.
 
 ```javascript
 Lit.init('project_id', {
