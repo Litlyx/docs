@@ -1,0 +1,49 @@
+---
+title: Google Tag Manager
+description: 'You can use Google Tag Manager to add Litlyx Analytics tracking code to your website.'
+---
+
+## Pre-Requisites
+
+Before proceeding, ensure you:
+<Steps>
+<Step title="Configure a Google Tag Manager Account">
+    Get started [here](https://tagmanager.google.com).
+  </Step>
+  <Step title="Get your litlyx's project ID">
+    Sign up on [Litlyx Dashboard](https://dashboard.litlyx.com/) and create a new project.
+  </Step>
+</Steps>
+
+## 1. Create a new Tag
+
+In your Google Tag Manager account, add a new tag.
+
+Edit the tag configuration and choose `Custom HTML` for the tag type.
+
+## 2. Initialize
+
+Next, paste your Litlyx javaScript tracking snippet in the `HTML` field within the `Custom HTML` section as follow: 
+
+```javascript javascript
+<script>
+var script = document.createElement('script');
+script.defer = true;
+script.dataset.project = "your_project_id”;
+script.src = "https://cdn.jsdelivr.net/gh/litlyx/litlyx-js/browser/litlyx.js";
+document.getElementsByTagName( 'head' ) [0] .appendChild(script);
+</script>
+```
+
+## 3. Setup a trigger
+After pasting the snippet, add a trigger to make this tag fire. Select the "All Pages" and filter "Page View" as the trigger if you want to count all your pages.
+
+## 4. Publish your Tag
+
+Give your tag a name... we suggest `Litlyx Analytics`.
+
+Than, click on the `Save` button. Click `Submit` to submit your changes. Then click on the `Publish` button
+
+## 5. Your turn now!
+
+That's it! Now you can go to your website and verify Litlyx Analytics script has been added and go to your dashboard to see whether the data are being tracked.
