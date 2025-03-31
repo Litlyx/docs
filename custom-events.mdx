@@ -61,11 +61,13 @@ Lit.event("click-on-buy");
 Sometimes just an `event name` isn't enough. If you want to add more control to your data, you can use the `metadata` field. Like this:
 
 ```javascript 
-Lit.event("click-on-buy", metadata: {
+Lit.event("click-on-buy", {
+  metadata: {
     "product_id": "1",
     "customer_id": "customer_id_1",
     "price": 1999.99,
     "product_name": "Design Chair with a cute cat!"
+  }
 });
 ```
 
