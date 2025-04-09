@@ -71,6 +71,7 @@
       "group": "Quickstarts",
       "pages": [
         "techs/js",
+        "techs/wordpress",
         "techs/google-tag-manager",
         "techs/serverless",
         "techs/nuxt",
