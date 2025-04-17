@@ -53,7 +53,7 @@ Add the following line of code, in each key `function` you would like to track.
 
 
 ```javascript 
-Lit.event("click-on-buy");
+Lit.event('click-on-buy');
 ```
 
 ## Handle Metadata
@@ -61,11 +61,12 @@ Lit.event("click-on-buy");
 Sometimes just an `event name` isn't enough. If you want to add more control to your data, you can use the `metadata` field. Like this:
 
 ```javascript 
-Lit.event("click-on-buy", metadata: {
-    "product_id": "1",
-    "customer_id": "customer_id_1",
-    "price": 1999.99,
-    "product_name": "Design Chair with a cute cat!"
+Lit.event('click_on_buy_item', {
+  metadata: {
+    'product-name': 'Coca-Cola',
+    'price': 1.50,
+    'currency': 'EUR'
+  }
 });
 ```
 
