@@ -2,55 +2,17 @@
 title: Custom Events
 description: 'Litlyx is a powerful tool that allows you to track custom events with minimal setup.'
 ---
-
-<img
-  className="block dark:hidden"
-  src="/images/dash-events.svg"
-  alt="Hero Light"
-/>
-<img
-  className="hidden dark:block"
-  src="/images/dash-events.svg"
-  alt="Hero Dark"
-/>
-
 ## Pre-Requisites
 
-Before proceeding, ensure you:
-<Steps>
-  <Step title="Get your project ID">
-    Sign up on [Litlyx](https://dashboard.litlyx.com/) and create a new project.
-  </Step>
-</Steps>
-
-
-## Fire Your First Event with cURL
-
-Curious to see how Litlyx works with events? Simply use the cURL command below to send a test event. Just replace `project_id` with your actual project ID in your terminal.
-
-```bash
-curl -X POST "https://broker.litlyx.com/event" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "pid": "project_id",
-    "name": "testEvent1",
-    "metadata": "{\"test\": \"something\"}",
-    "website": "something",
-    "userAgent": "something"
-  }'
-```
-
+Before proceeding, ensure you sign up on [Litlyx](https://dashboard.litlyx.com/) and create a new project.
 
 ## Minimal Setup
 
-
 <Note>
-Ensure you already initialized the library in your entry point.
+Make sure you have initialized the library in your entry point.
 </Note>
 
-
 Add the following line of code, in each key `function` you would like to track.
-
 
 ```javascript 
 Lit.event('click-on-buy');
@@ -86,11 +48,39 @@ myFunction () {
 }
 ```
 
-
 ## Ready to go!
 
 Analyze all yours `custom events` on the cloud dashboard. 
 
-- Understand how users interact with your custom events by creating `Custom Funnels`. 
+- Understand how users interact with your website by creating `Custom Funnels`. 
 - Analyze where your users come from and trigger an event with the `User Flow`.
-- Interact with events metadata with our `Events Metadata Analyzer`.
+- Check events metadata with our `Events Metadata Analyzer`.
+
+
+<img
+  className="block dark:hidden"
+  src="/images/dash-events.svg"
+  alt="Hero Light"
+/>
+<img
+  className="hidden dark:block"
+  src="/images/dash-events.svg"
+  alt="Hero Dark"
+/>
+
+
+## For Devs 👾 Test events with cURL
+
+Curious to see how Litlyx works with events? Simply use the cURL command below to send a test event. Just replace `project_id` with your actual project ID in your terminal.
+
+```bash
+curl -X POST "https://broker.litlyx.com/event" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "pid": "project_id",
+    "name": "testEvent1",
+    "metadata": "{\"test\": \"something\"}",
+    "website": "something",
+    "userAgent": "something"
+  }'
+```

@@ -61,7 +61,6 @@
     {
       "group": "Get Started",
       "pages": [
-        "introduction",
         "universal",
         "custom-events",
         "quickstart"
@@ -72,6 +71,8 @@
       "pages": [
         "techs/js",
         "techs/wordpress",
+        "techs/shopify",
+        "techs/framer",
         "techs/google-tag-manager",
         "techs/serverless",
         "techs/nuxt",
