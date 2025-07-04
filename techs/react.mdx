@@ -11,12 +11,12 @@ Before proceeding, ensure you:
   <Step title="Have installed React">
     Get started [here](https://react.dev/)
   </Step>
-  <Step title="Get your project ID">
-    Sign up on [Litlyx Dashboard](https://dashboard.litlyx.com/) and create a new project.
+  <Step title="Get your workspace ID">
+    Sign up on [Litlyx Dashboard](https://dashboard.litlyx.com/) and create a new workspace.
   </Step>
 </Steps>
 
-## 0. Create Project
+## 0. Create workspace
 
 In this example, we used [Vite](https://vitejs.dev) as a local development server.
 
@@ -54,22 +54,22 @@ Now import Litlyx in your `entry-point` file. The easiest way in React is in the
 import { Lit } from "litlyx-js"
 ```
 
-<Note>If you have an advanced React project or you are a senior developer, import it in the chosen path where you configure the entire application.</Note>
+<Note>If you have an advanced React workspace or you are a senior developer, import it in the chosen path where you configure the entire application.</Note>
 
 ## 3. Initialize
 
-Next, initialize the Litlyx library with your project in your entry-point file (always `App.tsx` in this example) as follow:
+Next, initialize the Litlyx library with your workspace in your entry-point file (always `App.tsx` in this example) as follow:
 
 ```javascript javascript
 function App() {
-    Lit.init("your_project_id");
+    Lit.init("workspace_id");
     /* previously existing code */
 }
 ```
 
 This line of code will immediately start collecting web analytics such as: `Page Visits`, `Real-Time Users`, `Referrers`, `Bounce Rate`, `Countries`, `Unique Visitor Sessions`, `OS` & `Devices`.
 
-<Note>If you have an advanced React project or you are a senior developer, remember not to show hardcoded IDs. Use a more secure pattern, for example, using an .env file and reading from it "your_project_id".</Note>
+<Note>If you have an advanced React workspace or you are a senior developer, remember not to show hardcoded IDs. Use a more secure pattern, for example, using an .env file and reading from it "workspace_id".</Note>
 
 ## 4. Collect Custom Events
 

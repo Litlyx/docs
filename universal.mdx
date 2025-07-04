@@ -16,7 +16,7 @@ description: 'Track web analytics and custom events anywhere JavaScript is suppo
 
 ## Pre-Requisites
 
-Before proceeding, ensure you sign up on [Litlyx](https://dashboard.litlyx.com/) and create a new project.
+Before proceeding, ensure you sign up on [Litlyx](https://dashboard.litlyx.com/) and create a new workspace.
 
 ## 1.a - Universal Setup (in just 30 seconds)
 
@@ -24,8 +24,8 @@ With a simple line of code in your **index.html**, inside the **body** or **head
 
 
 ```javascript 
-<script defer data-project="project_id_here" 
-src="https://cdn.jsdelivr.net/gh/litlyx/litlyx-js/browser/litlyx.js">
+<script defer data-workspace="workspace_id" 
+src="https://cdn.jsdelivr.net/npm/litlyx-js/browser/litlyx.js">
 </script>
 ```
 
@@ -55,10 +55,10 @@ import { Lit } from "litlyx-js"
 ```
 
 
-Next, initialize Litlyx library with your project in your entry-point file as follow:
+Next, initialize Litlyx library with your workspace in your entry-point file as follow:
 
 ```javascript javascript
-Lit.init("your_project_id");
+Lit.init("workspace_id");
 ```
 
 ## Ready to go!

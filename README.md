@@ -18,4 +18,4 @@ If you need more information, help, or want to provide general feedback, feel fr
 
 # Contributors
 
-Every kind of contribution is accepted in this stage of the project. In the future we will improve the contributor onboarding process. 
+Every kind of contribution is accepted in this stage of the workspace. In the future we will improve the contributor onboarding process. 

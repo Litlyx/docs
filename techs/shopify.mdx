@@ -5,7 +5,7 @@ description: 'Setup Litlyx in shopify within seconds.'
 
 ## Pre-Requisites
 
-Before proceeding, ensure you sign up on [Litlyx](https://dashboard.litlyx.com/) and create a new project.
+Before proceeding, ensure you sign up on [Litlyx](https://dashboard.litlyx.com/) and create a new workspace.
 
 ## How to Connect Litlyx Analytics to Your Shopify Store
 
@@ -56,12 +56,12 @@ Steps
 2. Paste the following code just right before `</head>`:
 
 ```javascript 
-<script defer data-project="project_id_here" 
-src="https://cdn.jsdelivr.net/gh/litlyx/litlyx-js/browser/litlyx.js">
+<script defer data-workspace="workspace_id" 
+src="https://cdn.jsdelivr.net/npm/litlyx-js/browser/litlyx.js">
 </script>
 ```
 
-3. Change `project_id_here` with your project_id from Litlyx’s dashboard.
+3. Change `workspace_id` with your workspace_id from Litlyx’s dashboard.
 4. Click on **Save** on the top-right corner.
 
 <img
@@ -129,9 +129,9 @@ const script = document.createElement('script');
 script.defer = true; 
 // Important step
 script.dataset.manual = true;
-// Change with you project_id
-script.dataset.project = "project_id";
-script.src = 'https://cdn.jsdelivr.net/gh/litlyx/litlyx-js/browser/litlyx.js';
+// Change with you workspace_id
+script.dataset.workspace = "workspace_id";
+script.src = 'https://cdn.jsdelivr.net/npm/litlyx-js/browser/litlyx.js';
 document.head.appendChild(script);
 script.onload = () => {
     //See the examples below to add 

@@ -4,7 +4,7 @@ description: 'Litlyx is a powerful tool that allows you to track custom events w
 ---
 ## Pre-Requisites
 
-Before proceeding, ensure you sign up on [Litlyx](https://dashboard.litlyx.com/) and create a new project.
+Before proceeding, ensure you sign up on [Litlyx](https://dashboard.litlyx.com/) and create a new workspace.
 
 ## Minimal Setup
 
@@ -71,13 +71,13 @@ Analyze all yours `custom events` on the cloud dashboard.
 
 ## For Devs 👾 Test events with cURL
 
-Curious to see how Litlyx works with events? Simply use the cURL command below to send a test event. Just replace `project_id` with your actual project ID in your terminal.
+Curious to see how Litlyx works with events? Simply use the cURL command below to send a test event. Just replace `workspace_id` with your actual workspace ID in your terminal.
 
 ```bash
 curl -X POST "https://broker.litlyx.com/event" \
   -H "Content-Type: application/json" \
   -d '{
-    "pid": "project_id",
+    "pid": "workspace_id",
     "name": "testEvent1",
     "metadata": "{\"test\": \"something\"}",
     "website": "something",

@@ -10,8 +10,8 @@ Before proceeding, ensure you:
   <Step title="Have installed Vue">
     Get started [here](https://vuejs.org/)
   </Step>
-  <Step title="Get your project ID">
-    Sign up on [Litlyx Dashboard](https://dashboard.litlyx.com/) and create a new project.
+  <Step title="Get your workspace ID">
+    Sign up on [Litlyx Dashboard](https://dashboard.litlyx.com/) and create a new workspace.
   </Step>
 </Steps>
 
@@ -44,10 +44,10 @@ import { Lit } from "litlyx-js"
 
 ## 3. Initialize
 
-Next, initialize Litlyx library with your project in your entry-point file as follow:
+Next, initialize Litlyx library with your workspace in your entry-point file as follow:
 
 ```javascript javascript
-Lit.init("your_project_id");
+Lit.init("workspace_id");
 ```
 
 This line of code will immediately start collecting web analytics such as: `Page Visits`, `Real-Time Users`, `Referrers`, `Bounce Rate`, `Countries`, `Unique Visitor Sessions`, `OS` & `Devices`.

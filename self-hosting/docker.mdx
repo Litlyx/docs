@@ -3,9 +3,9 @@ title: Self-host with Docker
 description: 'Discover how to self-host Litlyx with Docker in seconds.'
 ---
 
-## 1. Clone the project
+## 1. Clone the workspace
 
-From github clone or fork the project on your local machine.
+From github clone or fork the workspace on your local machine.
 
 ## 2. Change user Credentials
 
@@ -33,11 +33,11 @@ Add `data-host`, add `data-port`, add `data-secure` and set up at true if is htt
 On the server, you need to open port `3000` for the dashboard instance and port `3099` (default) for forwarding visits and events.
 
 ```javascript
-<script defer data-project="project_id_here" 
+<script defer data-workspace="workspace_id" 
               data-host="your-host-name" 
               data-port="your-producer-port" 
               data-secure="false"
-        src="https://cdn.jsdelivr.net/gh/litlyx/litlyx-js/browser/litlyx.js">
+        src="https://cdn.jsdelivr.net/npm/litlyx-js/browser/litlyx.js">
 </script>
 ```
 <Note>The Producer service collects data and adds it to a queue for storage. By default, it uses port 3099, but you can choose a different port if needed.</Note>
@@ -48,7 +48,7 @@ Add `data-host`, add `data-port`, add `data-secure` and set up at true if is htt
 On the server, you need to open port `3000` for the dashboard instance and port `3099` (default) for forwarding visits and events.
 
 ```javascript
-Lit.init('project_id', {
+Lit.init('workspace_id', {
   server: {
     host: "your-host-name",
     port: 3099,

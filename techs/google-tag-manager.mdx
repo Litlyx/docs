@@ -10,8 +10,8 @@ Before proceeding, ensure you:
 <Step title="Configure a Google Tag Manager Account">
     Get started [here](https://tagmanager.google.com).
   </Step>
-  <Step title="Get your litlyx's project ID">
-    Sign up on [Litlyx Dashboard](https://dashboard.litlyx.com/) and create a new project.
+  <Step title="Get your litlyx's workspace ID">
+    Sign up on [Litlyx Dashboard](https://dashboard.litlyx.com/) and create a new workspace.
   </Step>
 </Steps>
 
@@ -29,8 +29,8 @@ Next, paste your Litlyx javaScript tracking snippet in the `HTML` field within t
 <script>
 var script = document.createElement('script');
 script.defer = true;
-script.dataset.project = "your_project_id";
-script.src = "https://cdn.jsdelivr.net/gh/litlyx/litlyx-js/browser/litlyx.js";
+script.dataset.workspace = "workspace_id";
+script.src = "https://cdn.jsdelivr.net/npm/litlyx-js/browser/litlyx.js";
 document.getElementsByTagName('head')[0].appendChild(script);
 </script>
 ```
