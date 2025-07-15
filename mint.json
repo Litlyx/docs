@@ -33,19 +33,10 @@
     {
       "name": "Self Hosting",
       "url": "self-hosting"
-    },
-    {
-      "name": "API",
-      "url": "api-reference"
     }
   ],
 
   "anchors": [
-    {
-      "name": "Documentation",
-      "icon": "book-open-cover",
-      "url": "https://docs.litlyx.com"
-    },
     {
       "name": "Discord",
       "icon": "discord",
@@ -89,19 +80,6 @@
         "self-hosting/introduction",
         "self-hosting/docker",
         "self-hosting/yml"
-      ]
-    },
-    {
-      "group": "API Documentation",
-      "pages": [
-        "api-reference/introduction"
-      ]
-    },
-    {
-      "group": "Endpoints",
-      "pages": [
-        "api-reference/endpoint/visits-post",
-        "api-reference/endpoint/events-post"
       ]
     }
   ],
