@@ -1,27 +1,15 @@
 ---
 title: Easy Setup
-description: 'Track web analytics and custom events anywhere JavaScript is supported, all within seconds. We support Wordpress, Shopify and any other website builders.'
+description: 'Track web analytics, visitors, sessions, and custom events anywhere in just seconds. We support WordPress, Shopify, and all major website builders.'
 ---
-
-<img
-  className="block dark:hidden"
-  src="/images/techs.svg"
-  alt="Hero Light"
-/>
-<img
-  className="hidden dark:block"
-  src="/images/techs.svg"
-  alt="Hero Dark"
-/>
 
 ## Pre-Requisites
 
-Before proceeding, ensure you sign up on [Litlyx](https://dashboard.litlyx.com/) and create a new workspace.
+Sign up on [Litlyx](https://dashboard.litlyx.com/) and create a new workspace.
 
-## 1.a - Universal Setup (in just 30 seconds)
+## Universal Setup
 
-With a simple line of code in your **index.html**, inside the **body** or **head** tag, you can start tracking data such as `Best performing pages`, `Unique visitors`, `Real-time Users`, `Sources`, `Bouncing Rate`, `Countries` and much more.
-
+With just one line of code in your **index.html** — placed either at the end of the **body** or inside the **head** tag — you can start tracking data like `Best Performing Pages`, `Unique Visitors`, `Real-time Users`, `Sources`, `Bounce Rate`, `Countries`, and much more.
 
 ```javascript 
 <script defer data-workspace="workspace_id" 
@@ -29,9 +17,19 @@ src="https://cdn.jsdelivr.net/npm/litlyx-js/browser/litlyx.js">
 </script>
 ```
 
-## 1.b - Using any package manager
+## Website Builder Setup
 
-Install Litlyx library from your favourite package manager.
+Litlyx is super versatile. Use it in your favorite website builder like `Wordpress`, `Webflow`, `Framer`, or any platform that lets you add **custom code** inside the **body** or **head** tag.
+
+```javascript 
+<script defer data-workspace="workspace_id" 
+src="https://cdn.jsdelivr.net/npm/litlyx-js/browser/litlyx.js">
+</script>
+```
+
+## Using a Package Manager or Framework
+
+Install the Litlyx library with your favorite package manager:
 
 <CodeGroup>
 ```bash npm
@@ -48,14 +46,13 @@ bun install litlyx-js
 ```
 </CodeGroup>
 
-Now import litlyx in your `entry-point` file.
+Now import Litlyx in your `entry-point` file.
 
 ```javascript javascript
 import { Lit } from "litlyx-js"
 ```
 
-
-Next, initialize Litlyx library with your workspace in your entry-point file as follow:
+Next, initialize the Litlyx library with your `workspace_id` in your entry-point file as follows:
 
 ```javascript javascript
 Lit.init("workspace_id");
@@ -63,7 +60,8 @@ Lit.init("workspace_id");
 
 ## Ready to go!
 
-Explore [Litlyx's Dashboard](https://dashboard.litlyx.com/) with your web analytics collected in real-time.
+Head over to the [Litlyx Dashboard](https://dashboard.litlyx.com/) to explore your real-time web analytics.
+
 <img
   className="block dark:hidden"
   src="/images/easy-dashboard.svg"

@@ -52,6 +52,7 @@
     {
       "group": "Get Started",
       "pages": [
+        "intro",
         "universal",
         "custom-events",
         "quickstart"
@@ -84,7 +85,6 @@
     }
   ],
   "footerSocials": {
-    "x": "https://x.com/litlyx",
     "github": "https://github.com/Litlyx/litlyx",
     "linkedin": "https://www.linkedin.com/company/litlyx",
     "website": "https://litlyx.com"
