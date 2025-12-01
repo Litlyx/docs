@@ -33,6 +33,10 @@
     {
       "name": "Self Hosting",
       "url": "self-hosting"
+    },
+     {
+      "name": "AI",
+      "url": "AI"
     }
   ],
 
@@ -56,6 +60,12 @@
         "universal",
         "custom-events",
         "quickstart"
+      ]
+    },
+    {
+      "group": "AI",
+      "pages": [
+        "AI/intro"
       ]
     },
     {
