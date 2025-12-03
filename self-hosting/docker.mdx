@@ -77,7 +77,24 @@ Replace them to keep your instance secure.
 
 ## 6. Start the Docker Containers
 
-Run this command:
+Prepare your docker images by running this command: 
+
+<CodeGroup>
+```bash npm
+npm run docker-prepare
+```
+```bash yarn
+yarn run docker-prepare
+```
+```bash pnpm
+pnpm run docker-prepare
+```
+```bash bun
+bun run docker-prepare
+```
+</CodeGroup>
+
+Than run this command to start the containers:
 
 ``` bash
 docker-compose up
