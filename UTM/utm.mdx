@@ -1,0 +1,343 @@
+---
+title: Learn about UTMs
+description: 'Learn what UTM parameters are, why they matter, and how to use them with Litlyx — explained for complete beginners.'
+---
+
+## What are UTMs? (Beginner Friendly)
+
+UTM stands for **Urchin Tracking Module**.  
+They are small pieces of text you add to the end of a link (URL) so that your analytics tool — like **Litlyx** — can understand **where your visitors came from** and **which campaigns work best**.
+
+Think of UTMs as **labels on your links**:
+
+- **Without UTM**: you know visits are coming to your site, but not exactly from where.
+- **With UTM**: you know if a visit came from:
+  - a specific **newsletter**
+  - a **Facebook ad**
+  - a **Google Ads campaign**
+  - a particular **post** or **button** you shared
+
+Example of a normal URL:
+
+```text
+https://yourwebsite.com/pricing
+```
+
+Example of the same URL with UTM parameters:
+
+```text
+https://yourwebsite.com/pricing?utm_source=newsletter&utm_medium=email&utm_campaign=summer_launch
+```
+
+Litlyx reads these parameters and shows them to you inside your dashboard.
+
+---
+
+## Why should you use UTMs?
+
+UTMs are essential for **Ethical Marketing** and **Ethical Tracking**, because they:
+
+- **Tell you which channels work best**
+  - Is it email, organic social, paid ads, or SEO?
+- **Show which campaigns bring the most conversions**
+  - You see which specific campaign brings signups or purchases.
+- **Help you compare content variations**
+  - Example: compare two different images or call-to-action buttons.
+- **Make your budget decisions data-driven**
+  - You can move budget from low-performing channels to high-performing ones.
+
+With Litlyx, all of this is done in a **privacy-first**, **GDPR-compliant**, and **ethical** way. \[[Everything you should know about UTM – Litlyx](https://litlyx.com/blog/utm-tracking-with-litlyx)\]
+
+---
+
+## The 5 UTM Parameters (Explained Simply)
+
+There are **five** standard UTM parameters. You do **not** need to use all of them every time, but you should at least use the main ones.
+
+### 1. `utm_source` (Where the traffic comes from)
+
+**Question it answers:** _“From which place did this visitor arrive?”_
+
+Typical values:
+
+- `google`
+- `facebook`
+- `twitter`
+- `newsletter`
+- `partner_website`
+
+Example:
+
+```text
+?utm_source=facebook
+```
+
+Use this to distinguish traffic between different **platforms or sources**.
+
+---
+
+### 2. `utm_medium` (How the traffic arrived)
+
+**Question it answers:** _“What type of channel brought this visitor?”_
+
+Typical values:
+
+- `email`
+- `cpc` (cost-per-click / paid ads)
+- `social`
+- `referral`
+- `banner`
+
+Example:
+
+```text
+?utm_medium=email
+```
+
+Use this to group channels by **type of marketing** you are doing.
+
+---
+
+### 3. `utm_campaign` (Which campaign it belongs to)
+
+**Question it answers:** _“Which marketing campaign is this visit part of?”_
+
+Typical values:
+
+- `summer_sale`
+- `black_friday_2025`
+- `product_launch`
+- `newsletter_march`
+
+Example:
+
+```text
+?utm_campaign=summer_sale
+```
+
+Use this to track performance at the level of a **specific promotion or campaign**.
+
+---
+
+### 4. `utm_term` (Which keyword or term)
+
+**Question it answers:** _“Which keyword did the user search for?”_  
+Mostly used in **paid search campaigns** (e.g., Google Ads).
+
+Typical values:
+
+- `running_shoes`
+- `privacy_first_analytics`
+- `seo_agency`
+
+Example:
+
+```text
+?utm_term=running_shoes
+```
+
+Use this when you care about **search keywords** and want to connect them to behavior on your site.
+
+---
+
+### 5. `utm_content` (Which version of the content)
+
+**Question it answers:** _“Which specific ad, button, or link was clicked?”_
+
+Typical values:
+
+- `image_a`
+- `image_b`
+- `cta_top`
+- `cta_footer`
+
+Example:
+
+```text
+?utm_content=image_a
+```
+
+Use this to **A/B test** creatives, buttons, or placements in a very granular way.
+
+---
+
+## Which UTMs are required?
+
+Technically, tracking will work as soon as **at least one** UTM parameter is present, but best practice (and what many tools expect) is:
+
+- **Always use**:
+  - `utm_source`
+  - `utm_medium`
+- **Add when needed**:
+  - `utm_campaign` (for any campaign)
+  - `utm_term` (for paid search)
+  - `utm_content` (for A/B tests or variations)
+
+Litlyx supports **all 5** UTM parameters, so you can go from simple tracking to very detailed analysis without leaving the privacy-first philosophy. \[[Everything you should know about UTM – Litlyx](https://litlyx.com/blog/utm-tracking-with-litlyx)\]
+
+---
+
+## How UTMs look inside a full URL
+
+You add UTMs after a `?` in the URL, and separate each parameter with `&`.
+
+Example:
+
+```text
+https://yourwebsite.com/signup?utm_source=newsletter&utm_medium=email&utm_campaign=summer_launch&utm_content=cta_footer
+```
+
+Breakdown:
+
+- `utm_source=newsletter` → came from your email newsletter
+- `utm_medium=email` → the medium is email
+- `utm_campaign=summer_launch` → this click belongs to the “summer launch” campaign
+- `utm_content=cta_footer` → the user clicked the call-to-action in the footer
+
+---
+
+## Tracking UTMs in Litlyx
+
+Litlyx automatically detects and tracks the 5 key UTM parameters:
+
+- `utm_source`
+- `utm_medium`
+- `utm_campaign`
+- `utm_term`
+- `utm_content`
+
+Once your visitor lands on a page that contains these parameters:
+
+1. **The Litlyx script** or SDK collects them.
+2. They are sent to **Litlyx Analytics**.
+3. You can see them aggregated in your **dashboard**, respecting privacy and GDPR.
+
+You do not need any extra complicated setup as long as:
+
+- Litlyx is correctly installed on your site (see `Easy Setup` and `Quickstarts`).
+- The URL your users click already includes UTM parameters.
+
+---
+
+## How to create a UTM link (step by step)
+
+You can create UTM links in two ways:
+
+- **Manually** (by typing the parameters yourself).
+- Using a **UTM builder tool** (recommended for teams).
+
+### 1. Decide where you want to send people
+
+Example landing page:
+
+```text
+https://yourwebsite.com/pricing
+```
+
+### 2. Choose your UTM values
+
+Imagine you are sending an email about a summer sale:
+
+- `utm_source=newsletter`
+- `utm_medium=email`
+- `utm_campaign=summer_sale`
+- `utm_content=cta_main`
+
+### 3. Build the final URL
+
+```text
+https://yourwebsite.com/pricing?utm_source=newsletter&utm_medium=email&utm_campaign=summer_sale&utm_content=cta_main
+```
+
+Use this URL in:
+
+- your email button (e.g., “See the offer”),
+- a banner,
+- or a text link.
+
+Litlyx will then show you how this **exact** campaign and link performed.
+
+---
+
+## Best practices for UTMs
+
+To keep your campaign tracking **clean, ethical, and easy to understand**, follow these guidelines:
+
+- **Be consistent**
+  - Decide on naming rules such as `email`, `social`, `cpc` and stick to them.
+- **Keep names short and clear**
+  - Prefer `summer_sale` over `our-amazing-summer-sale-2025-with-discounts`.
+- **Avoid spaces and special characters**
+  - Use lowercase and underscores: `black_friday_2025`.
+- **Use UTMs only where needed**
+  - Do not add UTMs to **internal links** inside your own website; use them for **external campaigns** (emails, ads, social posts).
+- **Test your links**
+  - Click each UTM link yourself and confirm:
+    - the page loads,
+    - Litlyx receives the visit,
+    - UTMs appear correctly in the dashboard.
+
+---
+
+## UTMs and privacy (the Litlyx way)
+
+UTM parameters are about **campaigns and traffic sources**, not about identifying individuals.
+
+With Litlyx:
+
+- You track how channels and campaigns perform.
+- You stay within **GDPR-compliant**, **ethical marketing** boundaries.
+- You avoid invasive tracking or fingerprinting.
+
+This means you get **useful marketing insights** while still respecting your visitors’ privacy and choices. \[[Everything you should know about UTM – Litlyx](https://litlyx.com/blog/utm-tracking-with-litlyx)\]
+
+---
+
+## Example scenarios
+
+Here are some real-world examples you can copy and adapt.
+
+### Example 1: Newsletter campaign
+
+- Goal: Track how your monthly newsletter performs.
+
+```text
+https://yourwebsite.com/blog/utm-guide?utm_source=newsletter&utm_medium=email&utm_campaign=monthly_update
+```
+
+### Example 2: Facebook ad vs Google ad
+
+- Goal: Compare performance of platforms.
+
+```text
+https://yourwebsite.com/signup?utm_source=facebook&utm_medium=cpc&utm_campaign=summer_launch
+https://yourwebsite.com/signup?utm_source=google&utm_medium=cpc&utm_campaign=summer_launch
+```
+
+### Example 3: A/B test on a button
+
+- Goal: Compare two CTAs in the same email.
+
+```text
+https://yourwebsite.com/pricing?utm_source=newsletter&utm_medium=email&utm_campaign=summer_sale&utm_content=cta_top
+https://yourwebsite.com/pricing?utm_source=newsletter&utm_medium=email&utm_campaign=summer_sale&utm_content=cta_footer
+```
+
+You can then see which **button position** drives more clicks and conversions in Litlyx.
+
+---
+
+## Summary
+
+- **UTMs** are labels you add to URLs to understand **where visitors come from** and **which campaigns work**.
+- The 5 key parameters are:
+  - `utm_source`
+  - `utm_medium`
+  - `utm_campaign`
+  - `utm_term`
+  - `utm_content`
+- Litlyx tracks all of them in a **privacy-first**, **GDPR-compliant**, and **ethical** way.
+- Use consistent, clear naming and test your links before launching campaigns.
+
+Once your UTMs are live and Litlyx is installed, open your **Litlyx Dashboard** to see which channels, campaigns, and creatives truly drive results.
+

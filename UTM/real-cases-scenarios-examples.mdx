@@ -1,0 +1,99 @@
+---
+title: Real case scenarios examples
+description: 'See practical, real-world examples of how to use UTMs with Litlyx across different channels.'
+---
+
+## 1. Track a campaign on Meta Ads (Facebook / Instagram)
+
+**Goal**: Understand how a paid campaign on Meta performs compared to other channels.
+
+- **Where the link lives**: In your Meta Ads (Facebook or Instagram) as the ad destination URL.
+- **What you learn in Litlyx**:
+  - How many visits and conversions this specific campaign generates.
+  - How it compares to Google Ads, email, or organic social.
+
+**Recommended UTMs**:
+
+- `utm_source=meta`
+- `utm_medium=cpc`
+- `utm_campaign=summer_launch_2026`
+- `utm_content=image_blue_cta` (or any creative identifier)
+
+**Example URL**:
+
+```text
+https://yourwebsite.com/?utm_source=meta&utm_medium=cpc&utm_campaign=summer_launch_2026&utm_content=image_blue_cta
+```
+
+Use this URL as the final destination in your Meta ad. Litlyx will attribute traffic and results to this campaign.
+
+---
+
+## 2. Add a “link in bio” UTM (Instagram / TikTok)
+
+**Goal**: Measure how much traffic and how many signups come from your profile link.
+
+- **Where the link lives**: In your Instagram or TikTok **bio** (or a link-in-bio tool).
+- **What you learn in Litlyx**:
+  - How effective your profile link is at driving traffic.
+  - How it performs over time as you change content or followers grow.
+
+**Recommended UTMs**:
+
+- `utm_source=instagram` (or `tiktok`)
+- `utm_medium=profile`
+- `utm_campaign=link_in_bio`
+
+**Example URL**:
+
+```text
+https://yourwebsite.com/?utm_source=instagram&utm_medium=profile&utm_campaign=link_in_bio
+```
+
+You can also create separate campaigns like `link_in_bio_q1_2026` to track performance over different periods.
+
+---
+
+## 3. Newsletter “Product Update” campaign
+
+**Goal**: Track how many people visit and convert from your email newsletter.
+
+- **Where the link lives**: In the body of your **newsletter email**.
+- **What you learn in Litlyx**:
+  - How much traffic comes from newsletters vs other email types.
+  - Which specific product updates drive signups or usage.
+
+**Recommended UTMs**:
+
+- `utm_source=newsletter`
+- `utm_medium=email`
+- `utm_campaign=product_update_april_2026`
+- `utm_content=primary_cta_button`
+
+**Example URL**:
+
+```text
+https://yourwebsite.com/changelog?utm_source=newsletter&utm_medium=email&utm_campaign=product_update_april_2026&utm_content=primary_cta_button
+```
+
+You can create variants such as `utm_content=text_link` to compare button vs text link performance.
+
+---
+
+## How to adapt these examples
+
+To make these scenarios work for you:
+
+- **Keep naming consistent**: reuse `email`, `cpc`, `social`, `referral`, etc.
+- **Encode the channel and intent**:
+  - `utm_source` → the platform (Meta, Reddit, newsletter, partner name).
+  - `utm_medium` → the type of traffic (cpc, email, profile, community, referral).
+  - `utm_campaign` → the specific initiative (launch, sale, update, partner program).
+  - `utm_content` → optional, to distinguish creatives, placements, or sub‑sources.
+- **Test each link** before launching:
+  - Click it yourself.
+  - Confirm the page loads correctly.
+  - Check in Litlyx that visits show up with the right UTM values.
+
+Once these are in place, your Litlyx dashboards will give you a clear view of **which real‑world actions and campaigns actually move the needle**.
+

@@ -34,12 +34,11 @@
       "name": "Self Hosting",
       "url": "self-hosting"
     },
-     {
-      "name": "AI",
-      "url": "AI"
+    {
+      "name": "UTM & Marketing",
+      "url": "UTM"
     }
   ],
-
   "anchors": [
     {
       "name": "Discord",
@@ -60,12 +59,6 @@
         "universal",
         "custom-events",
         "quickstart"
-      ]
-    },
-    {
-      "group": "AI",
-      "pages": [
-        "AI/intro"
       ]
     },
     {
@@ -91,6 +84,14 @@
         "self-hosting/introduction",
         "self-hosting/docker",
         "self-hosting/yml"
+      ]
+    },
+    {
+      "group": "UTM",
+      "pages": [
+        "UTM/introduction",
+        "UTM/utm",
+        "UTM/real-cases-scenarios-examples"
       ]
     }
   ],
